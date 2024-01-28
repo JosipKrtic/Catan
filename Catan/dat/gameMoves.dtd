@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT gameMoves ((firstTurnDiceRollPhaseGameMove | initialBuildingPhaseGameMove | mainGamePhaseGameMove)*)>
+
+<!ELEMENT firstTurnDiceRollPhaseGameMove (activePlayerName, headlineText1, imageURL1, imageURL2, headlineText2)>
+
+<!ELEMENT initialBuildingPhaseGameMove (activePlayerName, headlineText1, villageCoordinateX, villageCoordinateY,
+        headlineText2, roadCoordinateX, roadCoordinateY, roadRotation, headlineText3,
+        sheepCount, wheatCount, clayCount, woodCount, rockCount)>
+
+<!ELEMENT mainGamePhaseGameMove (activePlayerName, headlineText1, imageURL1, imageURL2, headlineText2, cityCoordinateX,
+        cityCoordinateY, headlineText3, villageCoordinateX, villageCoordinateY, headlineText4, roadCoordinateX,
+        roadCoordinateY, roadRotation, headlineText5, robberCoordinateX, robberCoordinateY, headlineText6,
+        sheepCount, wheatCount, clayCount, woodCount, rockCount)>
+
+
+<!ELEMENT activePlayerName (#PCDATA)>
+<!ELEMENT headlineText1 (#PCDATA)>
+<!ELEMENT imageURL1 (#PCDATA)>
+<!ELEMENT imageURL2 (#PCDATA)>
+<!ELEMENT villageCoordinateX (#PCDATA)>
+<!ELEMENT villageCoordinateY (#PCDATA)>
+<!ELEMENT headlineText2 (#PCDATA)>
+<!ELEMENT roadCoordinateX (#PCDATA)>
+<!ELEMENT roadCoordinateY (#PCDATA)>
+<!ELEMENT roadRotation (#PCDATA)>
+<!ELEMENT headlineText3 (#PCDATA)>
+<!ELEMENT sheepCount (#PCDATA)>
+<!ELEMENT wheatCount (#PCDATA)>
+<!ELEMENT clayCount (#PCDATA)>
+<!ELEMENT woodCount (#PCDATA)>
+<!ELEMENT rockCount (#PCDATA)>
+<!ELEMENT cityCoordinateX (#PCDATA)>
+<!ELEMENT cityCoordinateY (#PCDATA)>
+<!ELEMENT headlineText4 (#PCDATA)>
+<!ELEMENT headlineText5 (#PCDATA)>
+<!ELEMENT robberCoordinateX (#PCDATA)>
+<!ELEMENT robberCoordinateY (#PCDATA)>
+<!ELEMENT headlineText6 (#PCDATA)>

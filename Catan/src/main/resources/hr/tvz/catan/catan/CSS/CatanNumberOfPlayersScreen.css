@@ -1,0 +1,17 @@
+.anchorPane {
+	-fx-background-color: #c5aa83;
+}
+
+.button {
+	-fx-background-radius: 20;
+	-fx-background-color: #c5aa83;
+	-fx-border-width: 4;
+	-fx-border-color:  black;
+	-fx-border-radius: 20;
+	-fx-cursor: hand;
+}
+
+.button:hover {
+	-fx-scale-x: 1.05;
+	-fx-scale-y: 1.05;
+}

@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1010.0" prefHeight="1010.0" prefWidth="1700.0" styleClass="anchor" stylesheets="@CSS/CatanGameScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.catan.catan.CatanGameController">
+   <children>
+      <Group>
+         <children>
+            <Region prefHeight="1000.0" prefWidth="50.0" styleClass="region" />
+            <Region layoutY="25.0" prefHeight="50.0" prefWidth="1700.0" styleClass="region" />
+            <Region layoutX="1658.0" prefHeight="1000.0" prefWidth="50.0" styleClass="region">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Region>
+            <Region layoutY="961.0" prefHeight="50.0" prefWidth="1700.0" styleClass="region" />
+            <Region layoutY="836.0" prefHeight="175.0" prefWidth="175.0" styleClass="playerRegion1" />
+            <Region layoutY="25.0" prefHeight="175.0" prefWidth="175.0" styleClass="playerRegion2" />
+            <Region layoutX="1533.0" layoutY="25.0" prefHeight="175.0" prefWidth="175.0" styleClass="playerRegion3" />
+            <Region layoutX="1533.0" layoutY="836.0" prefHeight="175.0" prefWidth="175.0" styleClass="playerRegion4" />
+         </children>
+      </Group>
+      <Group layoutX="400.0" layoutY="25.0">
+         <children>
+            <Region prefHeight="80.0" prefWidth="900.0" styleClass="headlineRegion" />
+            <Text fx:id="headlineText" layoutX="40.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll the dice or build!" textAlignment="CENTER" wrappingWidth="820.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group layoutY="400.0">
+         <children>
+            <Region prefHeight="250.0" prefWidth="120.0" styleClass="diceRegion" />
+            <ImageView fx:id="rollDice1" fitHeight="70.0" fitWidth="70.0" layoutX="15.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/1.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rollDice2" fitHeight="70.0" fitWidth="70.0" layoutX="15.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/2.PNG" />
+               </image>
+            </ImageView>
+            <Button fx:id="rollDice" layoutX="90.0" layoutY="88.0" mnemonicParsing="false" onAction="#rollDice" prefHeight="60.0" prefWidth="60.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/shuffle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Group>
+      <Group layoutX="400.0" layoutY="898.0">
+         <children>
+            <Region layoutY="33.0" prefHeight="80.0" prefWidth="900.0" rotate="180.0" styleClass="headlineRegion" />
+            <Group layoutX="175.0">
+               <children>
+                  <Group layoutX="-50.0">
+                     <children>
+                        <Region layoutX="43.0" layoutY="49.0" prefHeight="30.0" prefWidth="70.0" styleClass="cardNumberRegion" />
+                        <Circle fill="#535353" layoutX="38.0" layoutY="38.0" radius="41.0" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="0.2" layoutY="0.2" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/sheep.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="sheepCountText" layoutX="76.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="30.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="90.0">
+                     <children>
+                        <Region layoutX="43.0" layoutY="49.0" prefHeight="30.0" prefWidth="70.0" styleClass="cardNumberRegion" />
+                        <Circle fill="#535353" layoutX="38.0" layoutY="38.0" radius="41.0" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="0.4" layoutY="0.4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/wheat.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="wheetCountText" layoutX="76.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="30.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="230.0">
+                     <children>
+                        <Region layoutX="43.0" layoutY="49.0" prefHeight="30.0" prefWidth="70.0" styleClass="cardNumberRegion" />
+                        <Circle fill="#535353" layoutX="38.0" layoutY="38.0" radius="41.0" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="0.4" layoutY="0.4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/brick.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="clayCountText" layoutX="76.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="30.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="370.0">
+                     <children>
+                        <Region layoutX="43.0" layoutY="49.0" prefHeight="30.0" prefWidth="70.0" styleClass="cardNumberRegion" />
+                        <Circle fill="#535353" layoutX="38.0" layoutY="38.0" radius="41.0" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="0.4" layoutY="0.4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/wood.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="woodCountText" layoutX="76.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="30.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="510.0">
+                     <children>
+                        <Region layoutX="43.0" layoutY="49.0" prefHeight="30.0" prefWidth="70.0" styleClass="cardNumberRegion" />
+                        <Circle fill="#535353" layoutX="38.0" layoutY="38.0" radius="41.0" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="0.5" layoutY="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/rock.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="rockCountText" layoutX="76.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="30.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+         </children>
+      </Group>
+      <Group fx:id="buildGroup" layoutX="1628.0" layoutY="270.0">
+         <children>
+            <Region prefHeight="500.0" prefWidth="80.0" styleClass="actionsRegion" />
+            <Button fx:id="continueGameButton" layoutX="-60.0" layoutY="35.0" minHeight="76.0" mnemonicParsing="false" onAction="#continueGame" prefHeight="60.0" prefWidth="60.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/play.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="buildCityButton" layoutX="-60.0" layoutY="125.0" minHeight="76.0" minWidth="94.0" mnemonicParsing="false" onAction="#enableCityBuilding" prefHeight="76.0" prefWidth="94.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="26.0" />
+               </font>
+               <graphic>
+                  <Group scaleX="0.7" scaleY="0.7" scaleZ="0.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c5aa83" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="39.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c5aa83" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="45.0" />
+                        <Polygon fill="#c5aa83" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="12.0" />
+                     </children>
+                  </Group>
+               </graphic>
+            </Button>
+            <Button fx:id="buildVillageButton" layoutX="-60.0" layoutY="215.0" minHeight="76.0" minWidth="94.0" mnemonicParsing="false" onAction="#enableVillageBuilding" prefHeight="76.0" prefWidth="94.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="26.0" />
+               </font>
+               <graphic>
+                  <Group>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c5aa83" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.5" width="39.0" />
+                        <Polygon fill="#c5aa83" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="14.0" />
+                     </children>
+                  </Group>
+               </graphic>
+            </Button>
+            <Button fx:id="buildRoadButton" layoutX="-60.0" layoutY="305.0" minHeight="76.0" minWidth="94.0" mnemonicParsing="false" onAction="#enableRoadBuilding" prefHeight="76.0" prefWidth="94.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="26.0" />
+               </font>
+               <graphic>
+                  <Group layoutX="90.0" rotate="90.0" scaleX="0.16" scaleY="0.12">
+                     <children>
+                        <Polygon fill="#c5aa83" layoutY="150.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="14.0" />
+                        <Polygon fill="#c5aa83" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="14.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c5aa83" height="150.0" layoutX="-20.0" layoutY="-80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="14.0" width="40.0" />
+                     </children>
+                  </Group>
+               </graphic>
+            </Button>
+            <Button fx:id="buildCardButton" layoutX="-60.0" layoutY="395.0" minHeight="76.0" minWidth="94.0" mnemonicParsing="false" onAction="#showBuildCard" prefHeight="76.0" prefWidth="94.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/buildCard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Group>
+      <Group fx:id="buildCardGroup" layoutX="1233.0" layoutY="378.0" visible="false">
+         <children>
+            <Region layoutX="5.0" layoutY="-1.0" prefHeight="250.0" prefWidth="470.0" styleClass="actionsRegion" />
+            <Button layoutX="25.0" layoutY="220.0" minHeight="76.0" mnemonicParsing="false" onAction="#showBuildCard" prefHeight="60.0" prefWidth="60.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/buildCard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <AnchorPane layoutX="25.0" layoutY="15.0" minHeight="-Infinity" prefWidth="430.0" styleClass="buildCardRegion">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/city.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="100.0" layoutX="72.0" layoutY="33.0" rotate="90.0" scaleX="0.22" startX="-100.0" stroke="#535353" strokeWidth="3.0" />
+                  <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="86.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/wheat.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="138.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="155.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/wheat.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="208.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="226.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/rock.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="278.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="295.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/rock.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="349.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="367.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/rock.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="95.0" layoutY="90.0" minHeight="-Infinity" prefWidth="360.0" styleClass="buildCardRegion">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/village.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="100.0" layoutX="72.0" layoutY="33.0" rotate="90.0" scaleX="0.22" startX="-100.0" stroke="#535353" strokeWidth="3.0" />
+                  <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="86.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/wood.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="138.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="155.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/brick.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="208.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="226.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/wheat.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="278.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="295.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/sheep.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="235.0" layoutY="165.0" minHeight="-Infinity" prefWidth="220.0" styleClass="buildCardRegion">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/road.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="100.0" layoutX="72.0" layoutY="33.0" rotate="90.0" scaleX="0.22" startX="-100.0" stroke="#535353" strokeWidth="3.0" />
+                  <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="86.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/wood.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="138.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="155.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/brick.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </Group>
+      <Group layoutX="290.0" layoutY="50.0" rotate="90.0" scaleX="0.8" scaleY="0.8">
+         <children>
+            <Group>
+               <children>
+                  <Group layoutX="280.0" layoutY="72.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="328.0" layoutY="43.0" rotate="-57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="532.0" layoutY="43.0" rotate="57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="580.0" layoutY="70.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="820.0" layoutY="215.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="770.0" layoutY="187.0" rotate="57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="922.0" layoutY="400.0" rotate="-57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="922.0" layoutY="457.0" rotate="57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="820.0" layoutY="640.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="773.0" layoutY="670.0" rotate="-57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="581.0" layoutY="782.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="533.0" layoutY="813.0" rotate="-57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="328.0" layoutY="812.0" rotate="57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="280.0" layoutY="782.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="179.0" layoutY="600.0" rotate="-57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="178.0" layoutY="540.0" rotate="57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="178.0" layoutY="256.0" rotate="57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="178.0" layoutY="313.0" rotate="-57.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="45.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="12.0" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="22.5" scaleX="0.09" startX="-100.0" />
+                        <Line endX="100.0" layoutX="11.0" layoutY="32.5" scaleX="0.09" startX="-100.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="198.0" layoutY="-25.0" rotate="-90.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="60.0" layoutX="43.0" layoutY="10.0" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" width="60.0" />
+                        <Circle fill="#f1dfaa" layoutX="72.0" layoutY="72.0" radius="34.5" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Text layoutX="60.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="40.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3:1" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="545.0" layoutY="-25.0" rotate="-90.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="60.0" layoutX="43.0" layoutY="10.0" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" width="60.0" />
+                        <Circle fill="#535353" layoutX="72.0" layoutY="72.0" radius="34.5" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="39.5" layoutY="39.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/wheat.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2:1" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="783.0" layoutY="120.0" rotate="-90.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="60.0" layoutX="43.0" layoutY="10.0" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" width="60.0" />
+                        <Circle fill="#535353" layoutX="72.0" layoutY="72.0" radius="34.5" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="39.5" layoutY="39.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/rock.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2:1" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="50.0" layoutY="250.0" rotate="-90.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="60.0" layoutX="43.0" layoutY="10.0" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" width="60.0" />
+                        <Circle fill="#535353" layoutX="72.0" layoutY="72.0" radius="34.5" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="39.5" layoutY="39.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/wood.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2:1" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="50.0" layoutY="535.0" rotate="-90.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="60.0" layoutX="43.0" layoutY="10.0" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" width="60.0" />
+                        <Circle fill="#535353" layoutX="72.0" layoutY="72.0" radius="34.5" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="39.5" layoutY="39.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/brick.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2:1" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="785.0" layoutY="665.0" rotate="-90.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="60.0" layoutX="43.0" layoutY="10.0" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" width="60.0" />
+                        <Circle fill="#535353" layoutX="72.0" layoutY="72.0" radius="34.5" stroke="#535353" strokeType="INSIDE" />
+                        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="39.5" layoutY="39.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/sheep.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2:1" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="935.0" layoutY="395.0" rotate="-90.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="60.0" layoutX="43.0" layoutY="10.0" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" width="60.0" />
+                        <Circle fill="#f1dfaa" layoutX="72.0" layoutY="72.0" radius="34.5" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Text layoutX="60.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="40.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3:1" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="547.0" layoutY="808.0" rotate="-90.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="60.0" layoutX="43.0" layoutY="10.0" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" width="60.0" />
+                        <Circle fill="#f1dfaa" layoutX="72.0" layoutY="72.0" radius="34.5" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Text layoutX="60.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="40.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3:1" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="200.0" layoutY="810.0" rotate="-90.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1dfaa" height="60.0" layoutX="43.0" layoutY="10.0" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" width="60.0" />
+                        <Circle fill="#f1dfaa" layoutX="72.0" layoutY="72.0" radius="34.5" stroke="#535353" strokeType="INSIDE" strokeWidth="2.5" />
+                        <Text layoutX="60.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="40.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3:1" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Group layoutX="200.0" layoutY="164.0">
+               <children>
+                  <Group layoutX="80.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage17" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="25.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber17" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="240.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage18" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="25.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber18" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="400.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage19" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber19" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Group layoutX="280.0" layoutY="307.0">
+               <children>
+                  <Group layoutX="-80.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage13" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="25.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber13" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="80.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage14" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber14" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="240.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage15" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber15" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="400.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage16" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber16" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Group layoutX="200.0" layoutY="450.0">
+               <children>
+                  <Group layoutX="-80.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage8" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber8" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="80.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage9" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber9" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="240.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage10" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber10" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="400.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage11" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber11" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="560.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage12" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber12" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Group layoutX="280.0" layoutY="593.0">
+               <children>
+                  <Group layoutX="-80.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage4" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber4" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="80.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage5" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber5" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="240.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage6" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber6" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="400.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage7" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber7" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <Group layoutX="200.0" layoutY="736.0">
+               <children>
+                  <Group layoutX="80.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage1" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber1" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="240.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage2" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber2" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="400.0" layoutY="-96.0">
+                     <children>
+                        <Polygon fill="#f1dfaa" layoutX="80.0" layoutY="96.0" points="-100.0, 60.0, 0.0, 120.0, 100.0, 60.0, 100.0, -60.0, 0.0, -120.0, -100.0, -60.0" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fx:id="fieldImage3" fitWidth="179.0" layoutX="-9.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+                        <Circle fill="#f1dfaa" layoutX="110.0" layoutY="96.0" radius="26.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="fieldNumber3" layoutX="87.0" layoutY="106.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="46.0">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+         </children>
+      </Group>
+      <Group fx:id="player1Group" layoutY="811.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="200.0" stroke="#535353" strokeType="INSIDE" strokeWidth="3.0" width="250.0" />
+            <Group layoutX="245.0" layoutY="150.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="50.0" stroke="#535353" strokeType="INSIDE" strokeWidth="3.0" width="60.0" />
+                  <Text fx:id="player1TotalPoints" layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Text fx:id="player1Name" layoutX="110.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="130.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="player1Avatar" fitHeight="130.0" fitWidth="130.0" layoutX="120.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/gameAvatar2.png" />
+               </image>
+            </ImageView>
+            <Group layoutX="5.0" layoutY="30.0" scaleX="0.6" scaleY="0.6">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="WHITE" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Text fx:id="player1NumOfCities" layoutX="70.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="-60.0" layoutY="20.0" scaleX="0.8" scaleY="0.8">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="WHITE" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Text fx:id="player1NumOfVillages" layoutX="70.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="35.0" layoutY="128.0" rotate="90.0" scaleX="0.15" scaleY="0.1">
+               <children>
+                  <Polygon fill="WHITE" layoutY="150.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Polygon fill="WHITE" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="-20.0" layoutY="-80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="40.0" />
+               </children>
+            </Group>
+            <Text fx:id="player1NumOfRoads" layoutX="70.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="15.0" layoutY="150.0" scaleX="0.8" scaleY="0.8">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" layoutX="12.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" layoutX="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+               </children>
+            </Group>
+            <Text fx:id="player1NumOfCards" layoutX="70.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group fx:id="player2Group" layoutY="25.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="200.0" stroke="#535353" strokeType="INSIDE" strokeWidth="3.0" width="250.0" />
+            <Group layoutX="245.0" layoutY="150.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="50.0" stroke="#535353" strokeType="INSIDE" strokeWidth="3.0" width="60.0" />
+                  <Text fx:id="player2TotalPoints" layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Text fx:id="player2Name" layoutX="110.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="130.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="player2Avatar" fitHeight="130.0" fitWidth="130.0" layoutX="120.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/gameAvatar1.png" />
+               </image>
+            </ImageView>
+            <Group layoutX="5.0" layoutY="30.0" scaleX="0.6" scaleY="0.6">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="WHITE" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Text fx:id="player2NumOfCities" layoutX="70.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="-60.0" layoutY="20.0" scaleX="0.8" scaleY="0.8">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="WHITE" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Text fx:id="player2NumOfVillages" layoutX="70.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="35.0" layoutY="128.0" rotate="90.0" scaleX="0.15" scaleY="0.1">
+               <children>
+                  <Polygon fill="WHITE" layoutY="150.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Polygon fill="WHITE" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="-20.0" layoutY="-80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="40.0" />
+               </children>
+            </Group>
+            <Text fx:id="player2NumOfRoads" layoutX="70.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="15.0" layoutY="150.0" scaleX="0.8" scaleY="0.8">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" layoutX="12.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" layoutX="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+               </children>
+            </Group>
+            <Text fx:id="player2NumOfCards" layoutX="70.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group fx:id="player3Group" layoutX="1458.0" layoutY="25.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="200.0" stroke="#535353" strokeType="INSIDE" strokeWidth="3.0" width="250.0" />
+            <Group layoutX="-57.0" layoutY="150.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="50.0" stroke="#535353" strokeType="INSIDE" strokeWidth="3.0" width="60.0" />
+                  <Text fx:id="player3TotalPoints" layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Text fx:id="player3Name" layoutX="110.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="130.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="player3Avatar" fitHeight="130.0" fitWidth="130.0" layoutX="120.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/gameAvatar3.png" />
+               </image>
+            </ImageView>
+            <Group layoutX="5.0" layoutY="30.0" scaleX="0.6" scaleY="0.6">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="WHITE" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Text fx:id="player3NumOfCities" layoutX="70.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="-60.0" layoutY="20.0" scaleX="0.8" scaleY="0.8">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="WHITE" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Text fx:id="player3NumOfVillages" layoutX="70.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="35.0" layoutY="128.0" rotate="90.0" scaleX="0.15" scaleY="0.1">
+               <children>
+                  <Polygon fill="WHITE" layoutY="150.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Polygon fill="WHITE" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="-20.0" layoutY="-80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="40.0" />
+               </children>
+            </Group>
+            <Text fx:id="player3NumOfRoads" layoutX="70.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="15.0" layoutY="150.0" scaleX="0.8" scaleY="0.8">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" layoutX="12.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" layoutX="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+               </children>
+            </Group>
+            <Text fx:id="player3NumOfCards" layoutX="70.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group fx:id="player4Group" layoutX="1458.0" layoutY="811.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="200.0" stroke="#535353" strokeType="INSIDE" strokeWidth="3.0" width="250.0" />
+            <Group layoutX="-57.0" layoutY="150.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="50.0" stroke="#535353" strokeType="INSIDE" strokeWidth="3.0" width="60.0" />
+                  <Text fx:id="player4TotalPoints" layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Text fx:id="player4Name" layoutX="110.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="130.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="player4Avatar" fitHeight="130.0" fitWidth="130.0" layoutX="120.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/gameAvatar4.png" />
+               </image>
+            </ImageView>
+            <Group layoutX="5.0" layoutY="30.0" scaleX="0.6" scaleY="0.6">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="WHITE" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Text fx:id="player4NumOfCities" layoutX="70.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="-60.0" layoutY="20.0" scaleX="0.8" scaleY="0.8">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="WHITE" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Text fx:id="player4NumOfVillages" layoutX="70.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="35.0" layoutY="128.0" rotate="90.0" scaleX="0.15" scaleY="0.1">
+               <children>
+                  <Polygon fill="WHITE" layoutY="150.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Polygon fill="WHITE" points="-50.0, 40.0, 50.0, 40.0, 0.0, -200.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" layoutX="-20.0" layoutY="-80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="40.0" />
+               </children>
+            </Group>
+            <Text fx:id="player4NumOfRoads" layoutX="70.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+            <Group layoutX="15.0" layoutY="150.0" scaleX="0.8" scaleY="0.8">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" layoutX="12.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" layoutX="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="20.0" />
+               </children>
+            </Group>
+            <Text fx:id="player4NumOfCards" layoutX="70.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group fx:id="roadGroup" disable="true" layoutX="536.0" layoutY="130.0" visible="false">
+         <children>
+            <Button layoutX="6.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="6.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="6.0" layoutY="296.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="6.0" layoutY="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="6.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="6.0" layoutY="487.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="64.0" layoutY="136.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="64.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="64.0" layoutY="391.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="64.0" layoutY="519.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="122.0" layoutY="102.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="122.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="122.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="122.0" layoutY="296.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="122.0" layoutY="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="122.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="122.0" layoutY="487.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="122.0" layoutY="552.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="179.0" layoutY="72.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="179.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="179.0" layoutY="327.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="179.0" layoutY="455.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="179.0" layoutY="583.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="39.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="102.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="296.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="487.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="552.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="236.0" layoutY="615.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="293.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="293.0" layoutY="136.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="293.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="293.0" layoutY="391.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="293.0" layoutY="519.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="293.0" layoutY="647.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="39.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="102.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="296.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="487.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="552.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="350.0" layoutY="615.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="408.0" layoutY="72.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="408.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="408.0" layoutY="327.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="408.0" layoutY="455.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="408.0" layoutY="583.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="464.0" layoutY="102.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="464.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="464.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="464.0" layoutY="296.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="464.0" layoutY="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="464.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="464.0" layoutY="487.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="464.0" layoutY="552.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="522.0" layoutY="136.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="522.0" layoutY="263.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="522.0" layoutY="391.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="522.0" layoutY="519.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" styleClass="cityVillageButton" />
+            <Button layoutX="580.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="580.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="580.0" layoutY="296.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="580.0" layoutY="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+            <Button layoutX="580.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="59.0" styleClass="cityVillageButton" />
+            <Button layoutX="580.0" layoutY="487.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildRoad" prefHeight="13.0" prefWidth="50.0" rotate="-59.0" styleClass="cityVillageButton" />
+         </children>
+      </Group>
+      <Group layoutX="536.0" layoutY="130.0">
+         <children>
+            <Rectangle fx:id="player1Road1" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player1Road2" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player1Road3" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player1Road4" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player1Road5" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player1Road6" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player1Road7" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player1Road8" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player1Road9" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player1Road10" arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road1" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road2" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road3" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road4" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road5" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road6" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road7" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road8" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road9" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player2Road10" arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road1" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road2" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road3" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road4" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road5" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road6" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road7" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road8" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road9" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player3Road10" arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road1" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road2" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road3" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road4" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road5" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road6" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road7" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road8" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road9" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+            <Rectangle fx:id="player4Road10" arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="50.0" />
+         </children>
+      </Group>
+      <Group fx:id="cityVillageGroup" disable="true" layoutX="536.0" layoutY="130.0" visible="false">
+         <children>
+            <Button layoutY="194.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutY="322.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="38.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="38.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="38.0" layoutY="386.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="38.0" layoutY="514.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="114.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="114.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="114.0" layoutY="386.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="114.0" layoutY="514.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="153.0" layoutY="66.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="153.0" layoutY="194.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="153.0" layoutY="322.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="153.0" layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="153.0" layoutY="578.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="229.0" layoutY="66.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="229.0" layoutY="194.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="229.0" layoutY="322.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="229.0" layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="229.0" layoutY="578.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="268.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="268.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="268.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="268.0" layoutY="386.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="268.0" layoutY="514.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="268.0" layoutY="642.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="344.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="344.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="344.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="344.0" layoutY="386.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="344.0" layoutY="514.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="344.0" layoutY="642.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="382.0" layoutY="66.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="382.0" layoutY="194.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="382.0" layoutY="322.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="382.0" layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="382.0" layoutY="578.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="458.0" layoutY="66.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="458.0" layoutY="194.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="458.0" layoutY="322.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="458.0" layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="458.0" layoutY="578.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="497.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="497.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="497.0" layoutY="386.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="497.0" layoutY="514.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="572.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="572.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="578.0" layoutY="386.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="572.0" layoutY="514.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="610.0" layoutY="194.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="610.0" layoutY="322.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="610.0" layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildVillage" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+         </children>
+      </Group>
+      <Group layoutX="536.0" layoutY="130.0">
+         <children>
+            <Group fx:id="player1Village1" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#dd9c62" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player1Village2" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#dd9c62" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player1Village3" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#dd9c62" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player1Village4" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#dd9c62" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player1Village5" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#dd9c62" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player2Village1" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#5392c6" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player2Village2" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#5392c6" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player2Village3" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#5392c6" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player2Village4" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#5392c6" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player2Village5" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#5392c6" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player3Village1" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#53904e" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player3Village2" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#53904e" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player3Village3" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#53904e" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player3Village4" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#53904e" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player3Village5" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#53904e" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player4Village1" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#ab5b5b" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player4Village2" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#ab5b5b" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player4Village3" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#ab5b5b" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player4Village4" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#ab5b5b" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+            <Group fx:id="player4Village5" scaleX="0.8" scaleY="0.8" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutX="80.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Polygon fill="#ab5b5b" points="50, 0, 150, 0, 200, 100, 0, 100" scaleX="0.197" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+               </children>
+            </Group>
+         </children>
+      </Group>
+      <Group>
+         <children>
+            <Group fx:id="player1City1" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#dd9c62" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player1City2" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#dd9c62" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player1City3" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#dd9c62" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player1City4" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd9c62" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#dd9c62" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player2City1" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#5392c6" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player2City2" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#5392c6" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player2City3" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#5392c6" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player2City4" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5392c6" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#5392c6" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player3City1" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#53904e" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player3City2" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#53904e" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player3City3" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#53904e" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player3City4" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#53904e" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#53904e" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player4City1" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#ab5b5b" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player4City2" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#ab5b5b" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player4City3" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#ab5b5b" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+            <Group fx:id="player4City4" scaleX="0.6" scaleY="0.6" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="39.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ab5b5b" height="25.0" layoutX="25.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="45.0" />
+                  <Polygon fill="#ab5b5b" layoutX="47.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -80.0" scaleX="0.26" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" />
+               </children>
+            </Group>
+         </children>
+      </Group>
+      <Group fx:id="cityGroup" disable="true" visible="false">
+         <children>
+            <Button fx:id="cityUpgrade1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildCity" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" visible="false" />
+            <Button fx:id="cityUpgrade2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildCity" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" visible="false" />
+            <Button fx:id="cityUpgrade3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildCity" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" visible="false" />
+            <Button fx:id="cityUpgrade4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildCity" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" visible="false" />
+            <Button fx:id="cityUpgrade5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buildCity" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" visible="false" />
+         </children>
+      </Group>
+      <Group fx:id="robberGroup" disable="true" layoutX="536.0" layoutY="130.0" visible="false">
+         <children>
+            <Button layoutX="77.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="77.0" layoutY="308.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="77.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="192.0" layoutY="116.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="192.0" layoutY="244.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="192.0" layoutY="372.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="192.0" layoutY="500.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="307.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="307.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="307.0" layoutY="308.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="307.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="307.0" layoutY="564.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="421.0" layoutY="116.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="421.0" layoutY="244.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="421.0" layoutY="372.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="421.0" layoutY="500.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="536.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="536.0" layoutY="308.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+            <Button layoutX="536.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#placeRobber" prefHeight="24.0" prefWidth="24.0" styleClass="cityVillageButton" />
+         </children>
+      </Group>
+      <Group fx:id="robberImage" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="40.0" rotate="-45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="12.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="40.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="12.0" />
+         </children>
+      </Group>
+      <MenuBar maxHeight="25.0" minHeight="25.0" prefWidth="1706.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Game">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#startNewGame" text="New game" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveGame" text="Save game" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadGame" text="Load game" />
+                  <MenuItem fx:id="replayGameMenuItem" disable="true" mnemonicParsing="false" onAction="#replayGame" text="Replay game" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Documentation">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#generateDocumentation" text="Generate" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

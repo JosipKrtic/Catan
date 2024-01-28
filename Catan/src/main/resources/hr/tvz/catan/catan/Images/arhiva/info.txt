@@ -1,0 +1,40 @@
+//OPTIONAL
+trading
+reverse second turn order of players
+only second turn placement gets materials
+longest road
+enable road building to nearby roads
+limit road building to current village in inital building stage
+limit village building from neighbour spots in initial building stage
+limit robber placement to same spot
+
+SIDE NOTE
+9 ports not visible, X of main board group was 290, new was is 330
+
+//REPLAY
+##InitialDiceRollPhase()##
+scaleActivePlayerCard ??
+headline text change
+dice roll values images
+headline text change
+all buttons are disabled!!
+
+##InitialBuildingPhase()##
+scaleActivePlayerCard
+headline text change
+placeVillage
+headline text change
+update materials
+placeRoad
+headline text change
+
+##mainGamePhase()##
+scaleActivePlayerCard
+headline text change
+dice roll values images
+headline text change
+updateMaterialsForAllPlayers
+CHECK: placeVillage
+CHECK: placeRoad
+CHECK: placeCity
+roober?

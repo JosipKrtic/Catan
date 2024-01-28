@@ -1,0 +1,38 @@
+.anchorPane {
+	-fx-background-color: #c5aa83;
+}
+
+.playerAnchor {
+	-fx-background-radius: 20;
+	-fx-background-color: #c5aa83;
+	-fx-border-width: 4;
+	-fx-border-color:  #535353;
+	-fx-border-radius: 20;
+}
+
+.text-field {
+	-fx-border-radius: 20;
+	-fx-background-radius: 20;
+}
+
+.region {
+	-fx-background-radius:  0 20 20 0;
+	-fx-background-color:  #c5aa83;
+	-fx-border-color:  #535353;
+	-fx-border-width: 4;
+	-fx-border-radius:  0 20 20 0;
+}
+
+.button {
+	-fx-background-radius: 20;
+	-fx-background-color: #c5aa83;
+	-fx-border-width: 4;
+	-fx-border-color:  #535353;
+	-fx-border-radius: 20;
+	-fx-cursor: hand;
+}
+
+.button:hover {
+	-fx-scale-x: 1.05;
+	-fx-scale-y: 1.05;
+}
