@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gameMoves SYSTEM "gameMoves.dtd">
+<gameMoves>
+    <firstTurnDiceRollPhaseGameMove>
+        <activePlayerName>Josip</activePlayerName>
+        <headlineText1>Josip roll the dice!</headlineText1>
+        <imageURL1>1</imageURL1>
+        <imageURL2>3</imageURL2>
+        <headlineText2>Josip rolled 4</headlineText2>
+    </firstTurnDiceRollPhaseGameMove>
+    <firstTurnDiceRollPhaseGameMove>
+        <activePlayerName>Barić</activePlayerName>
+        <headlineText1>Barić roll the dice!</headlineText1>
+        <imageURL1>6</imageURL1>
+        <imageURL2>3</imageURL2>
+        <headlineText2>Barić rolled 9</headlineText2>
+    </firstTurnDiceRollPhaseGameMove>
+    <firstTurnDiceRollPhaseGameMove>
+        <activePlayerName>Joško</activePlayerName>
+        <headlineText1>Joško roll the dice!</headlineText1>
+        <imageURL1>5</imageURL1>
+        <imageURL2>2</imageURL2>
+        <headlineText2>Joško rolled 7</headlineText2>
+    </firstTurnDiceRollPhaseGameMove>
+    <firstTurnDiceRollPhaseGameMove>
+        <activePlayerName>Sintić</activePlayerName>
+        <headlineText1>Sintić roll the dice!</headlineText1>
+        <imageURL1>4</imageURL1>
+        <imageURL2>5</imageURL2>
+        <headlineText2>Sintić rolled 9</headlineText2>
+    </firstTurnDiceRollPhaseGameMove>
+    <initialBuildingPhaseGameMove>
+        <activePlayerName>Barić</activePlayerName>
+        <headlineText1>Barić build your village!</headlineText1>
+        <villageCoordinateX>259.0</villageCoordinateX>
+        <villageCoordinateY>336.0</villageCoordinateY>
+        <headlineText2>Barić just placed a village!</headlineText2>
+        <roadCoordinateX>350.0</roadCoordinateX>
+        <roadCoordinateY>360.0</roadCoordinateY>
+        <roadRotation>-59.0</roadRotation>
+        <headlineText3>Barić just placed a road!</headlineText3>
+        <sheepCount>0</sheepCount>
+        <wheatCount>1</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>1</woodCount>
+        <rockCount>1</rockCount>
+    </initialBuildingPhaseGameMove>
+    <initialBuildingPhaseGameMove>
+        <activePlayerName>Joško</activePlayerName>
+        <headlineText1>Joško build your village!</headlineText1>
+        <villageCoordinateX>144.0</villageCoordinateX>
+        <villageCoordinateY>272.0</villageCoordinateY>
+        <headlineText2>Joško just placed a village!</headlineText2>
+        <roadCoordinateX>236.0</roadCoordinateX>
+        <roadCoordinateY>296.0</roadCoordinateY>
+        <roadRotation>-59.0</roadRotation>
+        <headlineText3>Joško just placed a road!</headlineText3>
+        <sheepCount>0</sheepCount>
+        <wheatCount>1</wheatCount>
+        <clayCount>1</clayCount>
+        <woodCount>0</woodCount>
+        <rockCount>1</rockCount>
+    </initialBuildingPhaseGameMove>
+    <initialBuildingPhaseGameMove>
+        <activePlayerName>Sintić</activePlayerName>
+        <headlineText1>Sintić build your village!</headlineText1>
+        <villageCoordinateX>412.0</villageCoordinateX>
+        <villageCoordinateY>208.0</villageCoordinateY>
+        <headlineText2>Sintić just placed a village!</headlineText2>
+        <roadCoordinateX>464.0</roadCoordinateX>
+        <roadCoordinateY>230.0</roadCoordinateY>
+        <roadRotation>59.0</roadRotation>
+        <headlineText3>Sintić just placed a road!</headlineText3>
+        <sheepCount>1</sheepCount>
+        <wheatCount>1</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>1</woodCount>
+        <rockCount>0</rockCount>
+    </initialBuildingPhaseGameMove>
+    <initialBuildingPhaseGameMove>
+        <activePlayerName>Josip</activePlayerName>
+        <headlineText1>Josip build your village!</headlineText1>
+        <villageCoordinateX>297.0</villageCoordinateX>
+        <villageCoordinateY>144.0</villageCoordinateY>
+        <headlineText2>Josip just placed a village!</headlineText2>
+        <roadCoordinateX>350.0</roadCoordinateX>
+        <roadCoordinateY>168.0</roadCoordinateY>
+        <roadRotation>59.0</roadRotation>
+        <headlineText3>Josip just placed a road!</headlineText3>
+        <sheepCount>0</sheepCount>
+        <wheatCount>0</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>2</woodCount>
+        <rockCount>1</rockCount>
+    </initialBuildingPhaseGameMove>
+    <initialBuildingPhaseGameMove>
+        <activePlayerName>Barić</activePlayerName>
+        <headlineText1>Barić build your village!</headlineText1>
+        <villageCoordinateX>144.0</villageCoordinateX>
+        <villageCoordinateY>400.0</villageCoordinateY>
+        <headlineText2>Barić just placed a village!</headlineText2>
+        <roadCoordinateX>179.0</roadCoordinateX>
+        <roadCoordinateY>455.0</roadCoordinateY>
+        <roadRotation>0.0</roadRotation>
+        <headlineText3>Barić just placed a road!</headlineText3>
+        <sheepCount>1</sheepCount>
+        <wheatCount>2</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>2</woodCount>
+        <rockCount>1</rockCount>
+    </initialBuildingPhaseGameMove>
+    <initialBuildingPhaseGameMove>
+        <activePlayerName>Joško</activePlayerName>
+        <headlineText1>Joško build your village!</headlineText1>
+        <villageCoordinateX>373.0</villageCoordinateX>
+        <villageCoordinateY>272.0</villageCoordinateY>
+        <headlineText2>Joško just placed a village!</headlineText2>
+        <roadCoordinateX>464.0</roadCoordinateX>
+        <roadCoordinateY>360.0</roadCoordinateY>
+        <roadRotation>59.0</roadRotation>
+        <headlineText3>Joško just placed a road!</headlineText3>
+        <sheepCount>1</sheepCount>
+        <wheatCount>2</wheatCount>
+        <clayCount>1</clayCount>
+        <woodCount>1</woodCount>
+        <rockCount>1</rockCount>
+    </initialBuildingPhaseGameMove>
+    <initialBuildingPhaseGameMove>
+        <activePlayerName>Sintić</activePlayerName>
+        <headlineText1>Sintić build your village!</headlineText1>
+        <villageCoordinateX>29.0</villageCoordinateX>
+        <villageCoordinateY>208.0</villageCoordinateY>
+        <headlineText2>Sintić just placed a village!</headlineText2>
+        <roadCoordinateX>122.0</roadCoordinateX>
+        <roadCoordinateY>230.0</roadCoordinateY>
+        <roadRotation>-59.0</roadRotation>
+        <headlineText3>Sintić just placed a road!</headlineText3>
+        <sheepCount>1</sheepCount>
+        <wheatCount>1</wheatCount>
+        <clayCount>2</clayCount>
+        <woodCount>2</woodCount>
+        <rockCount>0</rockCount>
+    </initialBuildingPhaseGameMove>
+    <initialBuildingPhaseGameMove>
+        <activePlayerName>Josip</activePlayerName>
+        <headlineText1>Josip build your village!</headlineText1>
+        <villageCoordinateX>259.0</villageCoordinateX>
+        <villageCoordinateY>464.0</villageCoordinateY>
+        <headlineText2>Josip just placed a village!</headlineText2>
+        <roadCoordinateX>350.0</roadCoordinateX>
+        <roadCoordinateY>487.0</roadCoordinateY>
+        <roadRotation>-59.0</roadRotation>
+        <headlineText3>Josip just placed a road!</headlineText3>
+        <sheepCount>0</sheepCount>
+        <wheatCount>0</wheatCount>
+        <clayCount>1</clayCount>
+        <woodCount>3</woodCount>
+        <rockCount>1</rockCount>
+    </initialBuildingPhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Barić</activePlayerName>
+        <headlineText1>Barić roll the dice!</headlineText1>
+        <imageURL1>1</imageURL1>
+        <imageURL2>4</imageURL2>
+        <headlineText2>Barić rolled 5</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX/>
+        <robberCoordinateY/>
+        <headlineText6/>
+        <sheepCount>1</sheepCount>
+        <wheatCount>2</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>2</woodCount>
+        <rockCount>1</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Joško</activePlayerName>
+        <headlineText1>Joško roll the dice!</headlineText1>
+        <imageURL1>5</imageURL1>
+        <imageURL2>2</imageURL2>
+        <headlineText2>Joško rolled 7</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX>412.0</villageCoordinateX>
+        <villageCoordinateY>336.0</villageCoordinateY>
+        <headlineText4>Joško just placed a village!</headlineText4>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX>1078.0</robberCoordinateX>
+        <robberCoordinateY>445.0</robberCoordinateY>
+        <headlineText6>Joško just placed a robber!</headlineText6>
+        <sheepCount>0</sheepCount>
+        <wheatCount>1</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>0</woodCount>
+        <rockCount>1</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Sintić</activePlayerName>
+        <headlineText1>Sintić roll the dice!</headlineText1>
+        <imageURL1>1</imageURL1>
+        <imageURL2>6</imageURL2>
+        <headlineText2>Sintić rolled 7</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX>373.0</villageCoordinateX>
+        <villageCoordinateY>144.0</villageCoordinateY>
+        <headlineText4>Sintić just placed a village!</headlineText4>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX>619.0</robberCoordinateX>
+        <robberCoordinateY>573.0</robberCoordinateY>
+        <headlineText6>Sintić just placed a robber!</headlineText6>
+        <sheepCount>0</sheepCount>
+        <wheatCount>0</wheatCount>
+        <clayCount>1</clayCount>
+        <woodCount>2</woodCount>
+        <rockCount>0</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Josip</activePlayerName>
+        <headlineText1>Josip roll the dice!</headlineText1>
+        <imageURL1>5</imageURL1>
+        <imageURL2>3</imageURL2>
+        <headlineText2>Josip rolled 8</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX/>
+        <robberCoordinateY/>
+        <headlineText6/>
+        <sheepCount>0</sheepCount>
+        <wheatCount>0</wheatCount>
+        <clayCount>1</clayCount>
+        <woodCount>3</woodCount>
+        <rockCount>1</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Barić</activePlayerName>
+        <headlineText1>Barić roll the dice!</headlineText1>
+        <imageURL1>2</imageURL1>
+        <imageURL2>1</imageURL2>
+        <headlineText2>Barić rolled 3</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX/>
+        <robberCoordinateY/>
+        <headlineText6/>
+        <sheepCount>2</sheepCount>
+        <wheatCount>2</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>2</woodCount>
+        <rockCount>2</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Joško</activePlayerName>
+        <headlineText1>Joško roll the dice!</headlineText1>
+        <imageURL1>2</imageURL1>
+        <imageURL2>3</imageURL2>
+        <headlineText2>Joško rolled 5</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX/>
+        <robberCoordinateY/>
+        <headlineText6/>
+        <sheepCount>3</sheepCount>
+        <wheatCount>1</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>0</woodCount>
+        <rockCount>2</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Sintić</activePlayerName>
+        <headlineText1>Sintić roll the dice!</headlineText1>
+        <imageURL1>2</imageURL1>
+        <imageURL2>3</imageURL2>
+        <headlineText2>Sintić rolled 5</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX/>
+        <robberCoordinateY/>
+        <headlineText6/>
+        <sheepCount>1</sheepCount>
+        <wheatCount>0</wheatCount>
+        <clayCount>1</clayCount>
+        <woodCount>4</woodCount>
+        <rockCount>0</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Josip</activePlayerName>
+        <headlineText1>Josip roll the dice!</headlineText1>
+        <imageURL1>3</imageURL1>
+        <imageURL2>4</imageURL2>
+        <headlineText2>Josip rolled 7</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX>734.0</robberCoordinateX>
+        <robberCoordinateY>253.0</robberCoordinateY>
+        <headlineText6>Josip just placed a robber!</headlineText6>
+        <sheepCount>0</sheepCount>
+        <wheatCount>0</wheatCount>
+        <clayCount>1</clayCount>
+        <woodCount>3</woodCount>
+        <rockCount>1</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Barić</activePlayerName>
+        <headlineText1>Barić roll the dice!</headlineText1>
+        <imageURL1>4</imageURL1>
+        <imageURL2>3</imageURL2>
+        <headlineText2>Barić rolled 7</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX>619.0</robberCoordinateX>
+        <robberCoordinateY>317.0</robberCoordinateY>
+        <headlineText6>Barić just placed a robber!</headlineText6>
+        <sheepCount>2</sheepCount>
+        <wheatCount>2</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>2</woodCount>
+        <rockCount>2</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Joško</activePlayerName>
+        <headlineText1>Joško roll the dice!</headlineText1>
+        <imageURL1>5</imageURL1>
+        <imageURL2>2</imageURL2>
+        <headlineText2>Joško rolled 7</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX>963.0</robberCoordinateX>
+        <robberCoordinateY>637.0</robberCoordinateY>
+        <headlineText6>Joško just placed a robber!</headlineText6>
+        <sheepCount>3</sheepCount>
+        <wheatCount>1</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>0</woodCount>
+        <rockCount>2</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Sintić</activePlayerName>
+        <headlineText1>Sintić roll the dice!</headlineText1>
+        <imageURL1>2</imageURL1>
+        <imageURL2>3</imageURL2>
+        <headlineText2>Sintić rolled 5</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX/>
+        <robberCoordinateY/>
+        <headlineText6/>
+        <sheepCount>1</sheepCount>
+        <wheatCount>0</wheatCount>
+        <clayCount>1</clayCount>
+        <woodCount>5</woodCount>
+        <rockCount>0</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Josip</activePlayerName>
+        <headlineText1>Josip roll the dice!</headlineText1>
+        <imageURL1>3</imageURL1>
+        <imageURL2>6</imageURL2>
+        <headlineText2>Josip rolled 9</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX/>
+        <robberCoordinateY/>
+        <headlineText6/>
+        <sheepCount>0</sheepCount>
+        <wheatCount>0</wheatCount>
+        <clayCount>2</clayCount>
+        <woodCount>3</woodCount>
+        <rockCount>1</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Barić</activePlayerName>
+        <headlineText1>Barić roll the dice!</headlineText1>
+        <imageURL1>6</imageURL1>
+        <imageURL2>4</imageURL2>
+        <headlineText2>Barić rolled 10</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX/>
+        <robberCoordinateY/>
+        <headlineText6/>
+        <sheepCount>2</sheepCount>
+        <wheatCount>2</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>2</woodCount>
+        <rockCount>2</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Joško</activePlayerName>
+        <headlineText1>Joško roll the dice!</headlineText1>
+        <imageURL1>4</imageURL1>
+        <imageURL2>3</imageURL2>
+        <headlineText2>Joško rolled 7</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX/>
+        <villageCoordinateY/>
+        <headlineText4/>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX>963.0</robberCoordinateX>
+        <robberCoordinateY>637.0</robberCoordinateY>
+        <headlineText6>Joško just placed a robber!</headlineText6>
+        <sheepCount>3</sheepCount>
+        <wheatCount>1</wheatCount>
+        <clayCount>0</clayCount>
+        <woodCount>0</woodCount>
+        <rockCount>2</rockCount>
+    </mainGamePhaseGameMove>
+    <mainGamePhaseGameMove>
+        <activePlayerName>Sintić</activePlayerName>
+        <headlineText1>Sintić roll the dice!</headlineText1>
+        <imageURL1>1</imageURL1>
+        <imageURL2>5</imageURL2>
+        <headlineText2>Sintić rolled 6</headlineText2>
+        <cityCoordinateX/>
+        <cityCoordinateY/>
+        <headlineText3/>
+        <villageCoordinateX>68.0</villageCoordinateX>
+        <villageCoordinateY>144.0</villageCoordinateY>
+        <headlineText4>Sintić just placed a village!</headlineText4>
+        <roadCoordinateX/>
+        <roadCoordinateY/>
+        <roadRotation/>
+        <headlineText5/>
+        <robberCoordinateX/>
+        <robberCoordinateY/>
+        <headlineText6/>
+        <sheepCount>0</sheepCount>
+        <wheatCount>1</wheatCount>
+        <clayCount>2</clayCount>
+        <woodCount>4</woodCount>
+        <rockCount>0</rockCount>
+    </mainGamePhaseGameMove>
+</gameMoves>

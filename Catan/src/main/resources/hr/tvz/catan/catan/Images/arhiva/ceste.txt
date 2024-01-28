@@ -1,0 +1,72 @@
+ROTATION
+-59
+59
+0
+
+X
+6
+64
+122
+179
+236
+293
+350
+408
+464
+522
+580
+
+
+Y
+7     - vodoravno
+39
+72   - vodoravno
+102
+136 - vodoravno
+168
+200 - vodoravno
+230
+263 - vodoravno
+296
+327 - vodoravno
+360
+391 - vodoravno
+423
+455 - vodoravno
+487
+519 - vodoravno
+552
+583 - vodoravno
+615
+647 - vodoravno
+
+
+
+##################
+SELO
+x - 458
+y - 322
+
+CESTE
+x - 408
+y - 327
+
+x - 464
+y - 296
+
+x - 464
+y - 360
+##################
+SELO
+x - 578
+y - 386
+
+CESTE
+x - 522
+y - 391
+
+x - 580
+y - 360
+
+x - 580
+y - 423

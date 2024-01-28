@@ -1,0 +1,84 @@
+.anchor {
+    -fx-background-image: url('../Images/background.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+.region {
+    -fx-background-color:  #c5aa83;
+    -fx-border-color:  #535353;
+    -fx-border-width: 3;
+}
+
+.playerRegion1, .playerRegion2, .playerRegion3, .playerRegion4, .headlineRegion, .diceRegion, .cardNumberRegion, .actionsRegion, .buildCardRegion {
+    -fx-background-color: #c5aa83;
+    -fx-border-color: #535353;
+    -fx-border-width: 3;
+}
+
+.playerRegion1 {
+    -fx-background-radius: 0 100 0 0;
+    -fx-border-radius: 0 100 0 0;
+}
+
+.playerRegion2 {
+    -fx-background-radius: 0 0 100 0;
+    -fx-border-radius: 0 0 100 0;
+}
+
+.playerRegion3 {
+    -fx-background-radius: 0 0 0 100;
+    -fx-border-radius: 0 0 0 100;
+}
+
+.playerRegion4 {
+    -fx-background-radius: 100 0 0 0;
+    -fx-border-radius: 100 0 0 0;
+}
+
+.headlineRegion {
+    -fx-background-radius: 0 0 50 50;
+    -fx-border-radius: 0 0 50 50;
+}
+
+.diceRegion {
+    -fx-background-radius: 0 50 50 0;
+    -fx-border-radius: 0 50 50 0;
+}
+
+.cardNumberRegion {
+    -fx-background-radius: 0 20 20 0;
+    -fx-border-radius: 0 20 20 0;
+}
+
+.actionsRegion {
+    -fx-background-radius: 50 0 0 50;
+    -fx-border-radius: 50 0 0 50;
+}
+
+.buildCardRegion {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.button {
+    -fx-background-radius: 20;
+    -fx-background-color: #c5aa83;
+    -fx-border-width: 4;
+    -fx-border-color:  #535353;
+    -fx-border-radius: 20;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.cityVillageButton {
+    -fx-background-radius: 0;
+    -fx-background-color: #c5aa83;
+    -fx-border-width: 2;
+    -fx-border-color:  #535353;
+    -fx-border-radius: 0;
+}
