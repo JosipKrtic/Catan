@@ -33,13 +33,13 @@
 
 <h3>ℹ️ About Screen</h3>
 <p align="center">
-  <img alt="About" width="600" src="Images/about.png"><br>
+  <img alt="About" width="600" src="Images/About.png"><br>
   <i>Information about the project and credits</i>
 </p>
 
 <h3>🧑 Player Setup</h3>
 <p align="center">
-  <img alt="Player Setup" width="600" src="Images/player_setup.png"><br>
+  <img alt="Player Setup" width="600" src="Images/PlayerScreen.png"><br>
   <i>Choose players, names, and avatars</i>
 </p>
 
@@ -65,7 +65,7 @@
 
 <h3>🏴‍☠️ Robber Placement</h3>
 <p align="center">
-  <img alt="Robber 1" width="400" src="Images/Robber1.png">
+  <img alt="Robber 1" width="400" src="Images/Robbeer1.png">
   <img alt="Robber 2" width="400" src="Images/Robber2.png"><br>
   <i>Placing the robber and stealing a resource</i>
 </p>
