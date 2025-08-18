@@ -34,7 +34,7 @@
 <h3>ℹ️ About Screen</h3>
 <p align="center">
   <img alt="About" width="600" src="Images/About.png"><br>
-  <i>Information about the project and credits</i>
+  <i>Information about the game rules</i>
 </p>
 
 <h3>🧑 Player Setup</h3>
@@ -53,7 +53,7 @@
 <p align="center">
   <img alt="Build Village 1" width="400" src="Images/BuildVillage1.png">
   <img alt="Build Village 2" width="400" src="Images/BuildVillage2.png"><br>
-  <i>Screens for building settlements and upgrading to cities</i>
+  <i>Screens for building settlements and placement preview</i>
 </p>
 
 <h3>🛣️ Building Roads</h3>
